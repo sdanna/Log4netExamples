@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Web.Http;
-using log4net.Config;
 
 namespace MVC4BasicConfiguration
 {
@@ -21,14 +19,6 @@ namespace MVC4BasicConfiguration
             // To avoid processing unexpected or malicious queries, use the validation settings on QueryableAttribute to validate incoming queries.
             // For more information, visit http://go.microsoft.com/fwlink/?LinkId=279712.
             //config.EnableQuerySupport();
-        }
-    }
-
-    public static class LoggingConfig
-    {
-        public static void Register(string configFile)
-        {
-            XmlConfigurator.Configure(new FileInfo(configFile));
         }
     }
 }
