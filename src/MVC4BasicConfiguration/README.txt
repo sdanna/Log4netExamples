@@ -8,3 +8,5 @@ All messages get logged to a rolling file appender by date.
 Warnings and above get logged to the EventLog
 
 A new global action filter has been implemented called HandleExceptionsAttribute that inherits from the HandleErrorAttribute.  The will log the exceptions to the Controller's logger.  See this StackOverflow question (http://stackoverflow.com/a/8712181/16149)
+
+Added an extension method in the GenericObjectExtensions class that gets a log4net logger of the type of the instance calling the method.
