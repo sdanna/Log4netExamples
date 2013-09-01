@@ -27,13 +27,7 @@ namespace MVC4BasicConfiguration
 
             var logger = LogManager.GetLogger(typeof (MvcApplication));
             logger.Info("===== Application Starting =====");
-
-            logger.Debug("Debug Message");
-            logger.Info("Info Message");
-            logger.Warn("Warn Message");
-            logger.Error("Error Message");
-            logger.Fatal("Fatal Message");
-
+            
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
@@ -42,5 +36,7 @@ namespace MVC4BasicConfiguration
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
         }
+
+        
     }
 }

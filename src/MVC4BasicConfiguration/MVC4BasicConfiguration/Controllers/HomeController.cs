@@ -17,6 +17,7 @@ namespace MVC4BasicConfiguration.Controllers
 
         public ActionResult About()
         {
+            throw new ApplicationException("blarg");
             ViewBag.Message = "Your app description page.";
 
             return View();
