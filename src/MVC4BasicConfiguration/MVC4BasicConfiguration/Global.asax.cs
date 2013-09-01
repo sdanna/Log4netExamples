@@ -21,7 +21,10 @@ namespace MVC4BasicConfiguration
 
         protected void Application_Start()
         {
-            LoggingConfig.Register(Server.MapPath("~/log4net.config"));
+            LoggingConfig.Register(
+                Server.MapPath("~/log4net.config"),
+                Server.MapPath("~/Logs/"));
+
             var logger = LogManager.GetLogger(typeof (MvcApplication));
             logger.Info("===== Application Starting =====");
 
