@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ObjectPrinter</id>
+    <version>1.0.4</version>
+    <title>ObjectPrinter</title>
+    <authors>Drew Burlingame</authors>
+    <owners>Drew Burlingame</owners>
+    <projectUrl>https://github.com/drewburlingame/ObjectPrinter</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Dumps an object to a string or a text writer. Great for debugging. Awesome for capturing context in production exception dumps. 
+
+Use ObjectPrinter.Log4Net for a renderer to automatically dump all logged exceptions using log4net.
+
+Updates:
+- fixed bug where NonSerializableWrapper was being printed.  added smoke tests.
+- fixed bug where empty enumerable could print poorly and lose data.  added smoke tests.</description>
+    <summary>Dump an object to string or textwriter.  Similar to print in php or python or console.log in nodejs.</summary>
+    <tags>.net debug dump exception</tags>
+  </metadata>
+</package>

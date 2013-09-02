@@ -35,6 +35,14 @@
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="ObjectPrinter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ObjectPrinter.1.0.4\lib\net40\ObjectPrinter.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectPrinter.Log4Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ObjectPrinter.Log4Net.1.0.3\lib\net40\ObjectPrinter.Log4Net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,7 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\GenericObjectExtensions.cs" />
+    <Compile Include="Components\Loan.cs" />
     <Compile Include="Logging\LogManager.cs" />
+    <Compile Include="Components\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

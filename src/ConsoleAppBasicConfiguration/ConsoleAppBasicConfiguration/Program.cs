@@ -4,8 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleAppBasicConfiguration.Logging;
-using log4net;
+using ConsoleAppBasicConfiguration.Components;
 using log4net.Config;
 
 namespace ConsoleAppBasicConfiguration
@@ -22,11 +21,26 @@ namespace ConsoleAppBasicConfiguration
 
             AppDomain.CurrentDomain.UnhandledException += CurrentDomainOnUnhandledException;
 
-            logger.Debug("Debug Message");
-            logger.Info("Info Message");
-            logger.Warn("Warning Message");
-            logger.Error("Error Message");
-            logger.Fatal("Error Message");
+            // Example object logging
+            var loan = new Loan
+                {
+                    LoanAmount = 20.00, 
+                    PaybackAmount = 25.00, 
+                    NextPaymentDue = DateTime.Now,
+                    LoanOfficer = new Person
+                        {
+                            Name = "Bob Johnson",
+                            Title = "Vice President"
+                        }
+                };
+            logger.Info(loan);
+
+            // Console color logging
+            logger.Debug("Debug Example");
+            logger.Info("Info Example");
+            logger.Warn("Warn Example");
+            logger.Error("Error Example");
+            logger.Fatal("Fatal Example");
 
             logger.Info("===== Application Ending =====");
             Console.WriteLine("Press any key to continue...");
